@@ -1,5 +1,5 @@
 {
-  "name": "lev",
+  "name": "pfraze-lev",
   "version": "3.3.1",
   "main": "index.js",
   "bin": "./bin/lev",
