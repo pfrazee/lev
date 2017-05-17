@@ -40,6 +40,7 @@
     "minimatch": "^2.0.1",
     "minimist": "^1.1.0",
     "multilevel": "^7.3.0",
+    "prettyoutput": "^1.1.1",
     "rc": "^0.5.4",
     "tabulate": "^1.0.0",
     "xtend": "^4.0.0"
