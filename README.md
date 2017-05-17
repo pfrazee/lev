@@ -26,14 +26,27 @@ set to `json`, these values will be parsed from strings into `json`.
 ## DEL &lt;key&gt;
 Delete a key from the database.
 
-## LS
-Get all the keys in the current range.
+## LS [sublevel]
+Get all the keys or values in the current range.
+
+Opts:
+
+ - `[sublevel]` A sublevel filter, eg `ls users`
+ - `-v/--values` Include values
+ - `-s/--select <attr>` Filter attributes down to given attribute(s). Can be used more than once. Eg: `ls -s username -s email`
+ - `-f/--filter <attr>=<value>` Filter entries down to given attribute=value match(es). Can be used more than once. Eg `ls -f username=bob -f email=bob@gmail.com`
 
 ## START &lt;key-pattern&gt;
 Defines the start of the current range. You can also use `GT` or `GTE`.
 
 ## END &lt;key-pattern&gt;
 Defines the end of the current range. You can also use `LT` or `LTE`.
+
+## SUB &lt;name&gt;
+Sugar to set START and END to the pattern for the given sub-level.
+
+## SUBS
+Tries to guess the full listing of sub-levels in the DB.
 
 ## LIMIT &lt;number&gt;
 Limit the number of records in the current range (defaults to 5000).
