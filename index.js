@@ -1,4 +1,3 @@
-var completion = require('./lib/completion');
 var history = require('./lib/history');
 var createREPL = require('./lib/repl');
 var getDB = require('./lib/db');
@@ -38,7 +37,6 @@ module.exports = function(args) {
   var repl = createREPL(db, args, cache);
 
   history(repl, args);
-  completion(repl, cache);
 
 };
 
